@@ -102,7 +102,7 @@ export default function App() {
       </Helmet>
       {/* Hero de cierre */}
       <header className="tu-hero">
-        <img src="/logo-tu.svg" alt="tu.com logo" className="tu-logo" />
+        <img src="https://cdn-img.widilo.es/img/tu.com-logo.png" alt="tu.com logo" className="tu-logo" />
         <h1>Gracias por acompañarnos.<br />tu.com cierra su actividad.</h1>
         <p className="tu-hero-sub">Tras años de innovación y servicio, ponemos fin a nuestra etapa como e-commerce.</p>
       </header>
@@ -145,7 +145,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="tu-footer">
-        <img src="/logo-tu.svg" alt="tu.com logo pequeño" className="tu-logo-footer" />
+        <img src="https://cdn-img.widilo.es/img/tu.com-logo.png" alt="tu.com logo pequeño" className="tu-logo-footer" />
         <nav>
           <a href="/privacidad.html" rel="noopener noreferrer">Privacidad</a>
           <a href="/cookies.html" rel="noopener noreferrer">Cookies</a>

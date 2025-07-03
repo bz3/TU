@@ -26,62 +26,161 @@ body, html {
   min-height: 100vh;
 }
 
-.tu-hero {
-  background: #fff;
+/* Barra superior informativa */
+.tu-topbar {
+  width: 100%;
+  background: #e6f7fa;
+  color: #0057ff;
   text-align: center;
-  padding: 3rem 1rem 2rem 1rem;
-  border-bottom: 2px solid #e5eaf0;
-  animation: fadeIn 1.2s;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+/* Header fijo blanco con logo y menú */
+.tu-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2.5rem 0.7rem 2.5rem;
+  box-shadow: 0 1px 0 #e5eaf0;
+}
+.tu-header-logo {
+  background: #f5f6fa;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.tu-header-logo img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.tu-header-nav {
+  display: flex;
+  gap: 2.2rem;
+  align-items: center;
+}
+.tu-header-nav a {
+  color: #222;
+  text-decoration: none;
+  font-size: 1.08rem;
+  font-weight: 500;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  transition: color 0.2s;
+  padding: 0.2rem 0.1rem;
+}
+.tu-header-nav a:hover {
+  color: #0057ff;
+}
+.tu-header-nav .tu-header-lang {
+  font-size: 1.1rem;
+  margin-left: 0.7rem;
+  cursor: pointer;
+}
+
+/* Hero con fondo oscuro y tipografía moderna */
+.tu-hero {
+  background: #0a0d13 url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+  min-height: 340px;
+  text-align: center;
+  padding: 4.5rem 1rem 3.5rem 1rem;
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .tu-logo {
-  width: 120px;
-  margin-bottom: 1.5rem;
+  display: none;
 }
 .tu-hero h1 {
-  color: #0057ff;
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin: 0 0 1rem 0;
-  line-height: 1.2;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1.2rem 0;
+  line-height: 1.15;
+  text-shadow: 0 2px 16px #0008;
 }
 .tu-hero-sub {
-  color: #222;
-  font-size: 1.2rem;
+  color: #fff;
+  font-size: 1.3rem;
+  font-style: italic;
   margin-bottom: 0;
+  text-shadow: 0 2px 16px #0008;
 }
 
-.tu-gracias {
-  background: #f6f8fa;
+/* Sección de agradecimiento y explicación con fondo oscuro */
+.tu-gracias, .tu-cierre-explicacion {
+  background: #181c23;
+  color: #fff;
   text-align: center;
-  padding: 2.5rem 1rem 2rem 1rem;
-  animation: fadeInUp 1.2s 0.2s both;
+  box-shadow: none;
 }
-.tu-gracias h2 {
-  color: #0057ff;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+.tu-gracias h2, .tu-cierre-explicacion h3 {
+  color: #fff;
 }
-.tu-gracias p {
-  color: #222;
-  font-size: 1.1rem;
+.tu-gracias p, .tu-cierre-explicacion p {
+  color: #e0e6ef;
 }
-
 .tu-cierre-explicacion {
-  background: #fff;
-  max-width: 600px;
-  margin: 2rem auto;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px 0 #0057ff11;
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
-  animation: fadeInUp 1.2s 0.4s both;
-}
-.tu-cierre-explicacion h3 {
-  color: #0057ff;
   margin-top: 0;
 }
-.tu-cierre-explicacion p {
+
+/* FAQ y contacto con fondo blanco para contraste */
+.tu-faq, .tu-contacto {
+  background: #fff;
   color: #222;
+  box-shadow: 0 2px 12px 0 #0057ff11;
 }
+.tu-faq h3, .tu-contacto h3 {
+  color: #0057ff;
+}
+
+/* Footer igual pero con fondo blanco y logo redondo */
+.tu-footer {
+  background: #fff;
+  border-top: 1px solid #e5eaf0;
+  text-align: center;
+  padding: 1.5rem 1rem 1rem 1rem;
+  margin-top: auto;
+  animation: fadeIn 1.2s 1s both;
+}
+.tu-logo-footer {
+  background: #f5f6fa;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  margin-bottom: 0.7rem;
+}
+
+@media (max-width: 900px) {
+  .tu-header {
+    padding: 0.7rem 1rem;
+  }
+  .tu-header-nav {
+    gap: 1.1rem;
+  }
+}
+@media (max-width: 600px) {
+  .tu-hero h1 {
+    font-size: 1.3rem;
+  }
+  .tu-header-nav {
+    gap: 0.7rem;
+  }
+}
+
 .tu-btn {
   display: inline-block;
   background: #0057ff;
@@ -108,10 +207,6 @@ body, html {
   box-shadow: 0 2px 12px 0 #0057ff11;
   padding: 2rem 1.5rem 1.5rem 1.5rem;
   animation: fadeInUp 1.2s 0.6s both;
-}
-.tu-faq h3 {
-  color: #0057ff;
-  margin-top: 0;
 }
 .tu-faq ul {
   list-style: none;
@@ -163,52 +258,9 @@ body, html {
   padding: 2rem 1rem 2.5rem 1rem;
   animation: fadeInUp 1.2s 0.8s both;
 }
-.tu-contacto h3 {
-  color: #0057ff;
-  margin-top: 0;
-}
 .tu-contacto a {
   color: #0057ff;
   text-decoration: underline;
-}
-
-.tu-footer {
-  background: #f6f8fa;
-  border-top: 2px solid #e5eaf0;
-  text-align: center;
-  padding: 1.5rem 1rem 1rem 1rem;
-  margin-top: auto;
-  animation: fadeIn 1.2s 1s both;
-}
-.tu-logo-footer {
-  width: 60px;
-  margin-bottom: 0.7rem;
-}
-.tu-footer nav {
-  margin-bottom: 0.5rem;
-}
-.tu-footer a {
-  color: #0057ff;
-  margin: 0 0.7rem;
-  text-decoration: none;
-  font-size: 0.98rem;
-  transition: color 0.2s;
-}
-.tu-footer a:hover {
-  color: #003fa3;
-}
-.tu-copy {
-  color: #888;
-  font-size: 0.95rem;
-}
-
-@media (max-width: 600px) {
-  .tu-hero h1 {
-    font-size: 1.3rem;
-  }
-  .tu-cierre-explicacion, .tu-faq {
-    padding: 1.2rem 0.5rem 1rem 0.5rem;
-  }
 }
 
 @keyframes fadeIn {
