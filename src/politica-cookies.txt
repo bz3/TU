@@ -1,5 +1,28 @@
-POLÍTICA DE COOKIES
+import React from "react";
+import "./index.css";
 
-Esta web no utiliza cookies de seguimiento ni de terceros. Solo se emplean cookies técnicas imprescindibles para el funcionamiento y la seguridad del sitio.
-
-Si tienes dudas, puedes contactar con info@tu.com. 
+export default function PoliticaCookies() {
+  return (
+    <div className="tu-legal-root">
+      <div className="tu-legal-container">
+        <h1>Política de Cookies</h1>
+        <section>
+          <h2>¿Qué son las cookies?</h2>
+          <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo al visitar sitios web. Permiten recordar tus preferencias y mejorar tu experiencia de navegación.</p>
+        </section>
+        <section>
+          <h2>Tipos de cookies utilizadas</h2>
+          <p>Este sitio utiliza cookies técnicas y de análisis para garantizar el funcionamiento y analizar el uso de la web. No se utilizan cookies publicitarias ni de terceros.</p>
+        </section>
+        <section>
+          <h2>Gestión de cookies</h2>
+          <p>Puedes configurar tu navegador para aceptar o rechazar cookies, así como para eliminarlas en cualquier momento. Consulta la ayuda de tu navegador para más información.</p>
+        </section>
+        <section>
+          <h2>Más información</h2>
+          <p>Si tienes dudas sobre nuestra política de cookies, puedes escribirnos a <a href="mailto:soporte@tu.com">soporte@tu.com</a>.</p>
+        </section>
+      </div>
+    </div>
+  );
+} 

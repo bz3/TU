@@ -1,16 +1,32 @@
-import React from 'react';
+import React from "react";
+import "./index.css";
 
-export default function PolicyModal({ open, onClose, title, text }) {
-  if (!open) return null;
+export default function AvisoLegal() {
   return (
-    <div style={{
-      position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
-      background: 'rgba(0,0,0,0.25)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center'
-    }}>
-      <div style={{ background: '#fff', borderRadius: 12, maxWidth: 480, width: '90%', padding: 24, boxShadow: '0 2px 16px rgba(0,0,0,0.08)' }}>
-        <h2 style={{ marginTop: 0 }}>{title}</h2>
-        <pre style={{ whiteSpace: 'pre-wrap', fontFamily: 'inherit', fontSize: 15, color: '#333', marginBottom: 24 }}>{text}</pre>
-        <button onClick={onClose} style={{ background: '#0057ff', color: '#fff', border: 'none', borderRadius: 6, padding: '8px 20px', fontWeight: 600, cursor: 'pointer' }}>Cerrar</button>
+    <div className="tu-legal-root">
+      <div className="tu-legal-container">
+        <h1>Aviso Legal</h1>
+        <section>
+          <h2>Identidad del titular</h2>
+          <p>Este sitio web es titularidad de TU.com.<br />
+          Para cualquier consulta, puedes contactar en <a href="mailto:soporte@tu.com">soporte@tu.com</a>.</p>
+        </section>
+        <section>
+          <h2>Condiciones de uso</h2>
+          <p>El acceso y uso de este sitio web atribuye la condición de usuario e implica la aceptación de las condiciones aquí reflejadas. El usuario se compromete a hacer un uso adecuado de los contenidos y servicios.</p>
+        </section>
+        <section>
+          <h2>Propiedad intelectual</h2>
+          <p>Todos los contenidos, textos, imágenes y logotipos son propiedad de TU.com o de terceros autorizados. Queda prohibida su reproducción total o parcial sin autorización expresa.</p>
+        </section>
+        <section>
+          <h2>Responsabilidad</h2>
+          <p>TU.com no se hace responsable de los daños derivados del uso de la web ni de los enlaces externos a sitios de terceros.</p>
+        </section>
+        <section>
+          <h2>Legislación aplicable</h2>
+          <p>Este aviso legal se rige por la legislación española. Para cualquier controversia, las partes se someten a los juzgados y tribunales de Madrid.</p>
+        </section>
       </div>
     </div>
   );

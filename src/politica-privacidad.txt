@@ -1,15 +1,36 @@
-POLÍTICA DE PRIVACIDAD
+import React from "react";
+import "./index.css";
 
-Responsable: Telefónica Innovación Digital, S.L.U.
-
-Finalidad: Gestión de consultas y comunicaciones relacionadas con el cierre de TU.com.
-
-Legitimación: Consentimiento del usuario.
-
-Destinatarios: No se cederán datos a terceros, salvo obligación legal.
-
-Derechos: Acceso, rectificación, supresión y demás derechos según la normativa vigente.
-
-Contacto: info@tu.com
-
-Para más información, puedes contactar con nosotros. 
+export default function PoliticaPrivacidad() {
+  return (
+    <div className="tu-legal-root">
+      <div className="tu-legal-container">
+        <h1>Política de Privacidad</h1>
+        <section>
+          <h2>Responsable del tratamiento</h2>
+          <p>El responsable de los datos personales recogidos en este sitio es TU.com. Puedes contactar en <a href="mailto:soporte@tu.com">soporte@tu.com</a>.</p>
+        </section>
+        <section>
+          <h2>Finalidad del tratamiento</h2>
+          <p>Los datos personales se recogen para gestionar los servicios ofrecidos, responder a consultas y cumplir con obligaciones legales.</p>
+        </section>
+        <section>
+          <h2>Legitimación</h2>
+          <p>La base legal para el tratamiento de tus datos es el consentimiento y el cumplimiento de obligaciones contractuales y legales.</p>
+        </section>
+        <section>
+          <h2>Destinatarios</h2>
+          <p>Tus datos no se cederán a terceros salvo obligación legal o para la prestación de servicios estrictamente necesarios para la actividad.</p>
+        </section>
+        <section>
+          <h2>Derechos</h2>
+          <p>Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad enviando un email a <a href="mailto:soporte@tu.com">soporte@tu.com</a>.</p>
+        </section>
+        <section>
+          <h2>Conservación de datos</h2>
+          <p>Los datos se conservarán durante el tiempo necesario para cumplir con la finalidad para la que se recabaron y las obligaciones legales.</p>
+        </section>
+      </div>
+    </div>
+  );
+} 
